@@ -6,6 +6,7 @@ if sozdanie == 'Да':
     a = {'start':'dict'}
     with open('in.json', 'w', encoding='UTF-8') as file:  # открываем файл на запись присвоив имя file
         json.dump(a, file, indent=0, ensure_ascii=False)
+
 elif sozdanie == 'Нет':
     def in_(a):
         while True:
@@ -13,9 +14,7 @@ elif sozdanie == 'Нет':
             if b == 'стоп':
                 break
             c = input('Введите значение')
-            print(a)
             a.setdefault(b,c)
-            print(a)
 
             with open('in.json', 'w', encoding='UTF-8') as file: # открываем файл на запись присвоив имя file
                 json.dump(a, file, indent=0, ensure_ascii=False) # Записываем объект (goods) в (file) как json
